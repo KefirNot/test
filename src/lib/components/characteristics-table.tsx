@@ -21,14 +21,15 @@ const CharacterTable = ({train, onClose} : TrainModalProps): JSX.Element => {
     const newArr = characteristics.map((char, i) => ({ id: i, ...char }));
     const [editedChar, setEditedChar] = useState<EditedCharType[]>(newArr);
 
-    const handleSave = async () => {
-        try {
-            const response = await axios.post('/api/train', { ...train, characteristics: editedChar, });
+//    const handleSave = async () => {
+//        try {
+//            const response = await axios.post('https://gist.githubusercontent.com/allbel/ae2f8ead09baf7bb66d281e3a6050261/raw/4c898f101913cd7918ab1d
+//bfce008fa12c6d4838/mock.json', { ...train, characteristics: editedChar, });
             
-        } catch (error) {
-            console.error(error); 
-        }
-    }
+//        } catch (error) {
+//            console.error(error); 
+//        }
+    //}
     const handleInputChange = (id: number, field : string, value: string) => {
         const newData = editedChar.map(item =>
             item.id === id ? { ...item, [field]: Number(value) } : item
