@@ -1,11 +1,11 @@
-export type DataType = {
-    name: string;
-    description: string;
-    characteristics: CharacteristicType[];
+export type TrainData = {
+  name: string;
+  description: string;
+  characteristics: CharacteristicData[];
 };
 
-export type CharacteristicType = {
-    speed: number;
-    force: number;
-    engineAmperage: number;
-}
+export type CharacteristicData = {
+  speed: number;
+  force: number;
+  engineAmperage: number;
+};
